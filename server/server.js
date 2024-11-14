@@ -10,7 +10,7 @@ const errorMiddleware = require("./middlewares/error-middleware.js");
 const path = require("path");
 
 const corsOptions = {
-  origin: process.env.API_URL,
+  origin: "*",
   methods: "GET, POST, PUT, DELETE, PATCH, HEAD",
   credentials: true,
 };
