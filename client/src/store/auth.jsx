@@ -9,7 +9,7 @@ export const AuthProvider = ({ children }) => {
 
   const getDetails = async () => {
     try{
-        const response = await fetch("https://scantaps.onrender.com/api/data/detail/",{
+        const response = await fetch("http://localhost:3500/api/data/detail/",{
           method: "GET",
 
         });

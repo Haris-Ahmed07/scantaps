@@ -156,7 +156,7 @@ var clientId = _id;
     const fetchAndIncrementVisitCount = async () => {
       try {
         // console.log("Fetching visit count...");
-        const incrementResponse = await axios.post(`https://scantaps.onrender.com/api/visit/${clientId}`);
+        const incrementResponse = await axios.post(`http://localhost:3500/api/visit/${clientId}`);
         // console.log("Current visit count fetched.");
         setVisitCount(incrementResponse.data.count);
         // console.log(`Visit count for client ${clientId} incremented. New count:`, incrementResponse.data.count);
