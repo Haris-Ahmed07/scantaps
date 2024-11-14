@@ -48,7 +48,7 @@ export const Portal = () => {
   const { details } = useAuth();
   // console.log(details)
 
-const apiUrl = import.meta.env.VITE_API_URL;
+
 const toDataURL = async (url) => {
 
   const response = await axios.get(url, { responseType: "blob" });
@@ -158,7 +158,7 @@ var clientId = _id;
     const fetchAndIncrementVisitCount = async () => {
       try {
         // console.log("Fetching visit count...");
-        const incrementResponse = await axios.post(`${apiUrl}/api/visit/${clientId}`);
+        const incrementResponse = await axios.post(`http://145.223.80.156:3500/api/visit/${clientId}`);
         // console.log("Current visit count fetched.");
         setVisitCount(incrementResponse.data.count);
         // console.log(`Visit count for client ${clientId} incremented. New count:`, incrementResponse.data.count);
