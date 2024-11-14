@@ -147,7 +147,7 @@ flag;
   // console.log(companyName)
   // console.log(name)
 
-const apiUrl = import.meta.env.VITE_API_URL;
+
 var [visitCount, setVisitCount] = useState(0);
 var clientId = _id; 
 // Used it for a Client make it dynamic by fetching the current client id
@@ -156,7 +156,7 @@ var clientId = _id;
     const fetchAndIncrementVisitCount = async () => {
       try {
         // console.log("Fetching visit count...");
-        const incrementResponse = await axios.post(`${apiUrl}/api/visit/${clientId}`);
+        const incrementResponse = await axios.post(`http://145.223.80.156:3500/api/visit/${clientId}`);
         // console.log("Current visit count fetched.");
         setVisitCount(incrementResponse.data.count);
         // console.log(`Visit count for client ${clientId} incremented. New count:`, incrementResponse.data.count);
